@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ЮАР</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/draggabilly.pkgd.min.js"></script>
+  <script src="js/db.js"></script>
+</head>
+<body>
+<div class="ave">
+  <div class="ave__title">Введите email</div>
+  <input type="email" maxlength="40" autocomplete="off" onkeyup="checkValidate(this)" autofocus class="ave__input">
+  <div class="ave__button button" onclick="logIn()">Продолжить</div>
+</div>
+<div class="header">
+  <div class="header__menu" onclick="toggleHamburger()"></div>
+  <div class="header__title">Шенен Блан</div>
+</div>
+<div class="main">
+  <div class="task">
+    <div class="lock hidden" style="z-index: 3"></div>
+    <div class="info" style="z-index: 2">
+      <div class="info__title">Выберите подходящие ноты для сорта Шенен Блан.</div>
+      <div onclick="startInfo(this)" class="info__button button">Понятно!</div>
+    </div>
+    <div class="task__page one left" style="z-index: 1">
+      <div class="one__grid">
+        <div class="one__categories one0"></div>
+        <div class="one__bottle" style="background-image: url('img/sh.png')"></div>
+      </div>
+      <div class="button" onclick="scoreButton(0);sortOneScore0()">Нажмите для завершения!</div>
+    </div>
+  </div>
+
+  <div class="task hidden">
+    <div class="lock hidden" style="z-index: 3"></div>
+    <div class="info" style="z-index: 2">
+      <div class="info__title">Выберите подходящие ноты для сорта Пинотаж.</div>
+      <div onclick="startInfo(this)" class="info__button button">Понятно!</div>
+    </div>
+    <div class="task__page one left" style="z-index: 1">
+      <div class="one__grid">
+        <div class="one__categories one1"></div>
+        <div class="one__bottle" style="background-image: url('img/po.png')"></div>
+      </div>
+      <div class="button" onclick="scoreButton(1);sortOneScore1()">Нажмите для завершения!</div>
+    </div>
+  </div>
+
+  <div class="task hidden">
+    <div class="lock hidden" style="z-index: 3"></div>
+    <div class="info" style="z-index: 2">
+      <div class="info__title">Поставьте в правильном порядке уровни географических наименований.</div>
+      <div onclick="startInfo(this)" class="info__button button">Понятно!</div>
+    </div>
+    <div class="task__page y left" style="z-index: 1">
+      <div class="y__grid">
+        <div class="y__movebox">
+          <div class="y__move" style="top: 0">DISTRICT</div>
+          <div class="y__move" style="top: 60px">REGION</div>
+          <div class="y__move" style="top: 120px">ESTATE</div>
+          <div class="y__move" style="top: 180px">WARD</div>
+          <div class="y__move" style="top: 240px">UNIT</div>
+        </div>
+      </div>
+      <div class="button" onclick="scoreButton(2);sortYScore()">Нажмите для завершения!</div>
+    </div>
+  </div>
+
+  <div class="task hidden">
+    <div class="lock hidden"></div>
+    <div class="info">
+      <div class="info__title">Прочитайте внимательно вопрос. Дайте развёрнутый ответ в комментариях к уроку.</div>
+      <div onclick="startInfo(this)" class="info__button button">Понятно!</div>
+    </div>
+    <div class="task__page asked left">
+      <div class="asked__title"></div>
+      <div class=" button" onclick="endButton()">Дать ответ!</div>
+    </div>
+  </div>
+</div>
+<div class="footer"></div>
+<div class="menu menu__off">
+  <div class="menu__content"></div>
+</div>
+<script src="js/sort_one.js"></script>
+<script src="js/sort_y.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
